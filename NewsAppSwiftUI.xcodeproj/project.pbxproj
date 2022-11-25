@@ -11,6 +11,9 @@
 		72118FA828E593EB00A90450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72118FA728E593EB00A90450 /* ContentView.swift */; };
 		72118FAA28E593ED00A90450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72118FA928E593ED00A90450 /* Assets.xcassets */; };
 		72118FAD28E593ED00A90450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72118FAC28E593ED00A90450 /* Preview Assets.xcassets */; };
+		72118FB428E595D600A90450 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72118FB328E595D600A90450 /* NewsData.swift */; };
+		72118FB628E5991900A90450 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72118FB528E5991900A90450 /* NewsViewModel.swift */; };
+		72118FB928E59C2E00A90450 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 72118FB828E59C2E00A90450 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		72118FA728E593EB00A90450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72118FA928E593ED00A90450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72118FAC28E593ED00A90450 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72118FB328E595D600A90450 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		72118FB528E5991900A90450 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		72118FBA28E5AEC900A90450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72118FB928E59C2E00A90450 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		72118FA428E593EB00A90450 /* NewsAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				72118FBA28E5AEC900A90450 /* Info.plist */,
 				72118FA528E593EB00A90450 /* NewsAppSwiftUIApp.swift */,
 				72118FA728E593EB00A90450 /* ContentView.swift */,
+				72118FB328E595D600A90450 /* NewsData.swift */,
+				72118FB528E5991900A90450 /* NewsViewModel.swift */,
 				72118FA928E593ED00A90450 /* Assets.xcassets */,
 				72118FAB28E593ED00A90450 /* Preview Content */,
 			);
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = NewsAppSwiftUI;
+			packageProductDependencies = (
+				72118FB828E59C2E00A90450 /* Alamofire */,
+			);
 			productName = NewsAppSwiftUI;
 			productReference = 72118FA228E593EB00A90450 /* NewsAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 72118F9928E593EB00A90450;
+			packageReferences = (
+				72118FB728E59C2E00A90450 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 72118FA328E593EB00A90450 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +155,8 @@
 			files = (
 				72118FA828E593EB00A90450 /* ContentView.swift in Sources */,
 				72118FA628E593EB00A90450 /* NewsAppSwiftUIApp.swift in Sources */,
+				72118FB428E595D600A90450 /* NewsData.swift in Sources */,
+				72118FB628E5991900A90450 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +288,7 @@
 				DEVELOPMENT_TEAM = V352KC79H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsAppSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +318,7 @@
 				DEVELOPMENT_TEAM = V352KC79H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsAppSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72118FB728E59C2E00A90450 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72118FB828E59C2E00A90450 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72118FB728E59C2E00A90450 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72118F9A28E593EB00A90450 /* Project object */;
 }
